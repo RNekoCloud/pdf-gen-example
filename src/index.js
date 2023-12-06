@@ -8,8 +8,6 @@ const htmlToPdfMake = require("html-to-pdfmake");
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
 const HTML = `
     <div>
         <h1>Hello world</h1>
