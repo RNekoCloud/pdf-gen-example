@@ -33,6 +33,6 @@ const docDefinition = {
   };
   
   const pdfDocGenerator = pdfMake.createPdf(docDefinition);
-  pdfDocGenerator.getBuffer(function (buffer) {
+  pdfDocGenerator.getBuffer((buffer) => {
     fs.writeFileSync("hello.pdf", buffer);
   });
