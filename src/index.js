@@ -1,8 +1,14 @@
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_font/";
-import fs from "fs";
-import { JSDOM } from "jsdom";
-import htmlToPdfMake from "html-to-pdfmake";
+const pdfMake = require("pdfmake/build/pdfmake");
+const pdfFonts = require("pdfmake/build/vfs_fonts");
+const fs = require("fs");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM("");
+const htmlToPdfMake = require("html-to-pdfmake");
+
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const HTML = `
     <div>
@@ -10,7 +16,6 @@ const HTML = `
     </div>
 `;
 
-const { window } = new JSDOM("");
 
 const html = htmlToPdfMake(HTML, {
     window
@@ -29,5 +34,5 @@ const docDefinition = {
   
   const pdfDocGenerator = pdfMake.createPdf(docDefinition);
   pdfDocGenerator.getBuffer(function (buffer) {
-    fs.writeFileSync("companies.pdf", buffer);
+    fs.writeFileSync("hello.pdf", buffer);
   });
