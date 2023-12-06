@@ -1,7 +1,6 @@
 {
   "name": "pdf-gen-example",
   "version": "1.0.0",
-  "type": "module",
   "description": "PDF Gen example",
   "main": "index.js",
   "scripts": {
