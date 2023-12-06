@@ -1,0 +1,23 @@
+{
+  "name": "pdf-gen-example",
+  "version": "1.0.0",
+  "description": "PDF Gen example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RNekoCloud/pdf-gen-example.git"
+  },
+  "keywords": [
+    "pdf",
+    "nodejs"
+  ],
+  "author": "RageNeko26",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RNekoCloud/pdf-gen-example/issues"
+  },
+  "homepage": "https://github.com/RNekoCloud/pdf-gen-example#readme"
+}
